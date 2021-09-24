@@ -10,7 +10,7 @@ public class LoginUser {
     public static void main(String[] args) {
         try{
 
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company?useSSL=false", "root", "pluralsight");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company_data?useSSL=false", "root", "pluralsight");
 
             Statement statement = connection.createStatement();
 
