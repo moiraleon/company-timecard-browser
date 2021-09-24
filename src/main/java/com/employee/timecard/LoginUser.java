@@ -1,8 +1,31 @@
 package com.employee.timecard;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Objects;
 
 public class LoginUser {
+    public static void main(String[] args) {
+        try{
+
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "pluralsight");
+
+            Statement statement = connection.createStatement();
+
+            ResultSet resultSet = statement.executeQuery("select * from Employee");
+
+            while (resultSet.next()) {
+                System.out.println(resultSet.getString("FirstName"));
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+
     public LoginUser(){
 
     }
@@ -37,4 +60,5 @@ public class LoginUser {
     public int hashCode() {
         return Objects.hash(employeeID, keyCode);
     }
+
 }
