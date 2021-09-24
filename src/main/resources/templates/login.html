@@ -7,7 +7,11 @@
 
 <style>
         body {
-    background-color : #E3E6E8;
+        background-image: url('https://thumbs.dreamstime.com/b/clocking-card-icon-flat-isolated-vector-eps-illustration-minimal-design-long-shadow-119143794.jpg');
+        min-height: 100vh;
+        background-position: center;
+        background-repeat:no-repeat;
+<!--    background-color : #E3E6E8;-->
     margin: 0;
     padding: 0;
 }
@@ -17,11 +21,13 @@ h1 {
     font-family: "SIMPSON";
 }
 form {
+
     align:center;
     width: 400px;
      background-color : #E3E6E8;
-     display: inline-block;
-     top-margin: 500px;
+     vertical-align: middle;
+     margin-top:400px;
+
 
 }
 
@@ -30,9 +36,12 @@ form {
   display: flex;
   justify-content: center;
   top-margin: 500px;
+
 }
+
+<!--style="background-image: url('https://thumbs.dreamstime.com/b/clocking-card-icon-flat-isolated-vector-eps-illustration-minimal-design-long-shadow-119143794.jpg');"-->
 </style>
-<body style="background-image: url('https://arrows.to/images/resources/measuring-time-to-value.webp');">
+<body>
 <h1>Company Clock In</h1>
 <div class="form-div" >
     <form name="f" th:action="@{/login}" method="post" >
